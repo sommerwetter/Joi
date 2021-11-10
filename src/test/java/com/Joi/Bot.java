@@ -2,7 +2,7 @@ package com.Joi;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.concurrent.TimeUnit;
-//test
+
 public class Bot {
 
     public static void main() {

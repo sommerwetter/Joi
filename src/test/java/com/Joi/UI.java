@@ -2,8 +2,8 @@ package com.Joi;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-//Test
-public class UI implements ActionListener{
+
+public class UI implements ActionListener {
 
 
     public static String nombre;

@@ -1,4 +1,4 @@
 # Joi
-Supreme Bot with an UI; based of my CopBot project
+Supreme Bot with a basic UI
 
 Chromedriver modified to bypass Selenium detection.

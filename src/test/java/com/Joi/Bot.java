@@ -32,11 +32,11 @@ public class Bot {
         WebForm webForm = new WebForm(driver);
         //webForm.SelectProduct(); //Manually select product
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        Delay.main(2000);
+        Delay.main(1000);
         webForm.SelectSize();
         Delay.main(1000);
         webForm.AddProduct();
-        Delay.main(2000);
+        Delay.main(1000);
         driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
         webForm.BuyProduct();
 
@@ -45,22 +45,22 @@ public class Bot {
 
         //Autofill
         webForm.enterName();
-        Delay.main(700);
+        //Delay.main(700);
 
         webForm.enterEmail();
         Delay.main(500);
 
         webForm.enterPhone();
-        Delay.main(600);
+        //Delay.main(600);
 
         webForm.enterStreet();
         Delay.main(500);
 
         webForm.enterCity();
-        Delay.main(300);
+        //Delay.main(300);
 
         webForm.enterZip();
-        Delay.main(400);
+       // Delay.main(400);
 
         webForm.enterCountry();
         Delay.main(800);
@@ -69,13 +69,13 @@ public class Bot {
         Delay.main(900);
 
         webForm.enterCardMonth();
-        Delay.main(500);
+        //Delay.main(500);
 
         webForm.enterCardYear();
-        Delay.main(300);
+        //Delay.main(300);
 
         webForm.enterCardCode();
-        Delay.main(300);
+        //Delay.main(300);
 
         webForm.AcceptAGBS();
         Delay.main(2000);

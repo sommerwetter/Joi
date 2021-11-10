@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class UI implements ActionListener {
+public class UI implements ActionListener{
 
 
     public static String nombre;

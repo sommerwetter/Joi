@@ -1,7 +1,4 @@
 package com.Joi;
-
-
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -88,9 +85,6 @@ public class UI implements ActionListener{
         });
 
 
-
-
-
         //Button
 
         ActionListener cerrar = e -> System.exit(0);
@@ -102,18 +96,12 @@ public class UI implements ActionListener{
         close.setBounds(126,560,120,30);
         close.setBackground(new java.awt.Color(0,0,0,80));
 
-
-
-
         //Panel
 
         panel2.setBackground(new java.awt.Color(250,250,250,80));
         panel2.setBounds(3,3,350,30);
         panel.setLayout(null);
         panel.setBackground(new java.awt.Color(0,0,0,80));
-
-
-
 
         panel.add(name);
         panel.add(email);

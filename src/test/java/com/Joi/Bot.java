@@ -27,7 +27,6 @@ public class Bot {
 
         ChromeDriver driver = new ChromeDriver(options);
 
-
         driver.get(Utils.SUP_URL);
         WebForm webForm = new WebForm(driver);
         //webForm.SelectProduct(); //Manually select product

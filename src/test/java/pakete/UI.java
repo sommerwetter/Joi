@@ -1,4 +1,4 @@
-package com.Joi;
+package pakete;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;

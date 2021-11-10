@@ -1,4 +1,4 @@
-package com.Joi;
+package pakete;
 
 public class Delay {
     //int d in milliseconds

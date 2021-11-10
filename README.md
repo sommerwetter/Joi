@@ -10,3 +10,9 @@ Supreme Bot with an UI; based of my CopBot project
 - Update v.0.0.1 New UI
 
 Chromedriver modified to bypass Selenium detection.
+
+---HOW TO USE---
+Donwload the zip file in the "Releases" section.
+Run/Doubleclick the "Joi" java file
+The chromedriver has always to be in the same folder/directory as the java file for it to work
+

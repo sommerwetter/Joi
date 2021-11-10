@@ -86,5 +86,5 @@ public class WebForm extends PageObject {
     public void AcceptAGBS(){this.AGBS.click();}
     public void ConfirmPurchase(){this.Confirm.click();}
 
-
+//test
 }

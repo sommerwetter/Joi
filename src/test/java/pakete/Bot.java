@@ -26,12 +26,16 @@ public class Bot {
         );
 
         ChromeDriver driver = new ChromeDriver(options);
+        //Set default page if no link is written
+        if (UI.pagina.equals("")){
+            UI.pagina = "https://www.supremenewyork.com/shop/all/t-shirts";
+        }
 
         driver.get(Utils.SUP_URL);
         WebForm webForm = new WebForm(driver);
         //webForm.SelectProduct(); //Manually select product
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        Delay.main(1000);
+        Delay.main(1500);
         webForm.SelectSize();
         Delay.main(1000);
         webForm.AddProduct();
@@ -50,7 +54,7 @@ public class Bot {
         Delay.main(500);
 
         webForm.enterPhone();
-        //Delay.main(600);
+        Delay.main(600);
 
         webForm.enterStreet();
         Delay.main(500);

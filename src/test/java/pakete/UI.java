@@ -30,6 +30,8 @@ public class UI implements ActionListener{
     public static JTextField cardcode = new JTextField(5);
     public static String talla;
     public static JTextField size = new JTextField(1);
+    public static String pagina;
+    public static JTextField link = new JTextField(50);
 
 
     private static int mouseX, mouseY;
@@ -63,6 +65,8 @@ public class UI implements ActionListener{
         CARDCODE.setForeground(Color.white);
         JLabel SIZE = new JLabel("Size");
         SIZE.setForeground(Color.white);
+        JLabel LINK = new JLabel("Link:");
+        LINK.setForeground(Color.white);
         JLabel TWITTER = new JLabel("Twitter: @sirtiffany");
         TWITTER.setForeground(Color.gray);
 
@@ -90,7 +94,7 @@ public class UI implements ActionListener{
         ActionListener cerrar = e -> System.exit(0);
 
         boton.addActionListener(new UI());
-        boton.setBounds(150, 420, 70,25);
+        boton.setBounds(150, 450, 70,25);
         boton.setBackground(new java.awt.Color(0,0,0,80));
         close.addActionListener(cerrar);
         close.setBounds(126,560,120,30);
@@ -115,6 +119,7 @@ public class UI implements ActionListener{
         panel.add(cardyear);
         panel.add(cardcode);
         panel.add(size);
+        panel.add(link);
 
         panel.add(boton);
         panel.add(close);
@@ -130,6 +135,7 @@ public class UI implements ActionListener{
         panel.add(CARDYEAR);
         panel.add(CARDCODE);
         panel.add(SIZE);
+        panel.add(LINK);
         panel.add(TWITTER);
 
         //TextField
@@ -145,6 +151,7 @@ public class UI implements ActionListener{
         cardyear.setBounds(100,310,165,25);
         cardcode.setBounds(100,340,165,25);
         size.setBounds(100,370,82,25);
+        link.setBounds(100,400,165,25);
 
 
         //Label
@@ -160,6 +167,7 @@ public class UI implements ActionListener{
         CARDYEAR.setBounds(10,310,80,25);
         CARDCODE.setBounds(10,340,80,25);
         SIZE.setBounds(10,370,40,25);
+        LINK.setBounds(10,400,40,25);
         TWITTER.setBounds(5,500,120,30);
 
         //Frame
@@ -196,6 +204,7 @@ public class UI implements ActionListener{
         tarjetayear = cardyear.getText();
         tarjetacodigo = cardcode.getText();
         talla = size.getText();
+        pagina = link.getText();
 
         Bot.main();
     }

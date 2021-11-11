@@ -1,4 +1,4 @@
-package com.Joi;
+package pakete;
 
 public class TestPlan {
 
@@ -11,4 +11,3 @@ public class TestPlan {
     }
 
 }
-

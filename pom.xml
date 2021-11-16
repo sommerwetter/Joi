@@ -62,7 +62,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.pakete.Main</mainClass>
+                            <mainClass>com.pakete.TestPlan</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

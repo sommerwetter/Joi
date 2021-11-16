@@ -3,6 +3,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.concurrent.TimeUnit;
 
+import static pakete.UI.*;
+
 public class Bot {
 
 
@@ -26,10 +28,7 @@ public class Bot {
         );
 
         ChromeDriver driver = new ChromeDriver(options);
-        //Set default page if no link is written
-        if (UI.pagina.equals("")){
-            UI.pagina = "https://www.supremenewyork.com/shop/all/t-shirts";
-        }
+
 
         driver.get(Utils.SUP_URL);
         WebForm webForm = new WebForm(driver);
@@ -86,8 +85,5 @@ public class Bot {
         webForm.ConfirmPurchase();
     }
 
-    public void bot(){
-
-    }
 
 }

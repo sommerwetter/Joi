@@ -2,6 +2,7 @@ package pakete;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Objects;
 
 public class UI implements ActionListener{
 
@@ -32,6 +33,13 @@ public class UI implements ActionListener{
     public static JTextField size = new JTextField(1);
     public static String pagina;
     public static JTextField link = new JTextField(50);
+    public static String section;
+
+    public static JComboBox tallaBar;
+    public static JComboBox monthBar;
+    public static JComboBox yearBar;
+    public static JComboBox linkBar;
+
 
 
     private static int mouseX, mouseY;
@@ -89,6 +97,32 @@ public class UI implements ActionListener{
         });
 
 
+        JMenuBar menuBar = new JMenuBar();
+
+        JMenu settings = new JMenu("Settings");
+
+
+
+        //Dropbars
+
+        String[] sizes =  {"Small","Medium","Large","XLarge"};
+        tallaBar = new JComboBox(sizes);
+
+        String[] months = {"01","02","03","04","05","06","07","08","09","10","11","12"};
+        monthBar = new JComboBox(months);
+
+        String[] years = {"2021","2022","2023","2024","2025","2026","2027","2028","2029","2030","2031"};
+        yearBar = new JComboBox(years);
+
+        String[] links = {"All","New","Jackets","Shirts","Tops/Sweaters","Sweatshirts","T-Shirts"};
+        linkBar = new JComboBox(links);
+
+
+
+
+
+
+
         //Button
 
         ActionListener cerrar = e -> System.exit(0);
@@ -115,11 +149,11 @@ public class UI implements ActionListener{
         panel.add(zip);
         panel.add(country);
         panel.add(cardnr);
-        panel.add(cardmonth);
-        panel.add(cardyear);
+        panel.add(monthBar);
+        panel.add(yearBar);
         panel.add(cardcode);
-        panel.add(size);
-        panel.add(link);
+        panel.add(tallaBar);
+        panel.add(linkBar);
 
         panel.add(boton);
         panel.add(close);
@@ -147,11 +181,11 @@ public class UI implements ActionListener{
         zip.setBounds(100,190,165,25);
         country.setBounds(100,220,165,25);
         cardnr.setBounds(100,250,165,25);
-        cardmonth.setBounds(100,280,165,25);
-        cardyear.setBounds(100,310,165,25);
+        monthBar.setBounds(100,280,45,25);
+        yearBar.setBounds(100,310,82,25);
         cardcode.setBounds(100,340,165,25);
-        size.setBounds(100,370,82,25);
-        link.setBounds(100,400,165,25);
+        tallaBar.setBounds(100,370,82,25);
+        linkBar.setBounds(100,400,165,25);
 
 
         //Label
@@ -190,6 +224,7 @@ public class UI implements ActionListener{
     @Override
 
     public void actionPerformed(ActionEvent e) {
+
         //credentials
 
         nombre = name.getText();
@@ -200,11 +235,32 @@ public class UI implements ActionListener{
         postal = zip.getText();
         pais = country.getText();
         tarjetanr = cardnr.getText();
-        tarjetames = cardmonth.getText();
-        tarjetayear = cardyear.getText();
+        tarjetames = (String) monthBar.getSelectedItem();
+        tarjetayear = (String) yearBar.getSelectedItem();
         tarjetacodigo = cardcode.getText();
-        talla = size.getText();
-        pagina = link.getText();
+        talla = (String) tallaBar.getSelectedItem();
+        //section = (String) linkBar.getSelectedItem();
+        if (linkBar.getSelectedItem().equals("All")){
+            pagina = "https://www.supremenewyork.com/shop/all";
+        }
+        if (linkBar.getSelectedItem().equals("New")){
+            pagina = "https://www.supremenewyork.com/shop/new";
+        }
+        if (linkBar.getSelectedItem().equals("Jackets")) {
+            pagina = "https://www.supremenewyork.com/shop/all/jackets";
+        }
+        if (linkBar.getSelectedItem().equals("Shirts")){
+            pagina = "https://www.supremenewyork.com/shop/all/shirts";
+        }
+        if (linkBar.getSelectedItem().equals("Tops/Sweaters")){
+            pagina = "https://www.supremenewyork.com/shop/all/tops_sweaters";
+        }
+        if (linkBar.getSelectedItem().equals("Sweatshirts")){
+            pagina = "https://www.supremenewyork.com/shop/all/sweatshirts";
+        }
+        if (linkBar.getSelectedItem().equals("T-Shirts")){
+            pagina = "https://www.supremenewyork.com/shop/all/t-shirts";
+        }
 
         Bot.main();
     }

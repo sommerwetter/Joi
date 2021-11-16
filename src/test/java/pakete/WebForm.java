@@ -2,6 +2,7 @@ package pakete;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import static pakete.UI.*;
 
 public class WebForm extends PageObject {
 
@@ -21,21 +22,21 @@ public class WebForm extends PageObject {
 
     //Size
 
-    private final String SIZE = UI.talla;
+    private final String SIZE = talla;
 
     // Shipping and Card Info
 
-    private final String NAME = UI.nombre;
-    private final String EMAIL = UI.correo;
-    private final String PHONE = UI.telefono;
-    private final String STREET = UI.calle;
-    private final String CITY = UI.ciudad;
-    private final String ZIP = UI.postal;
-    private final String COUNTRY = UI.pais;
-    private final String CARDNR = UI.tarjetanr;
-    private final String CARDMONTH = UI.tarjetames;
-    private final String CARDYEAR = UI.tarjetayear;
-    private final String CARDCODE = UI.tarjetacodigo;
+    private final String NAME = nombre;
+    private final String EMAIL = correo;
+    private final String PHONE = telefono;
+    private final String STREET = calle;
+    private final String CITY =ciudad;
+    private final String ZIP = postal;
+    private final String COUNTRY = pais;
+    private final String CARDNR = tarjetanr;
+    private final String CARDMONTH = tarjetames;
+    private final String CARDYEAR = tarjetayear;
+    private final String CARDCODE = tarjetacodigo;
 
     @FindBy (xpath = "//input[@id='order_billing_name']")
     private WebElement Name;

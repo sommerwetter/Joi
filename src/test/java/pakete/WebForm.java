@@ -10,9 +10,6 @@ public class WebForm extends PageObject {
         super(driver);
     }
 
-
-    @FindBy(xpath = "//img[@alt=' gupy cwrtc']")
-    private WebElement Product;
     @FindBy(xpath = "//select[@id='size']")
     private WebElement SelectSize;
     @FindBy(xpath = "//fieldset[@id='add-remove-buttons']/input")
@@ -38,6 +35,7 @@ public class WebForm extends PageObject {
     private final String CARDYEAR = tarjetayear;
     private final String CARDCODE = tarjetacodigo;
 
+    //Xpaths
     @FindBy (xpath = "//input[@id='order_billing_name']")
     private WebElement Name;
     @FindBy (xpath = "//input[@id='order_email']")
@@ -66,7 +64,7 @@ public class WebForm extends PageObject {
     private WebElement Confirm;
 
 
-    public void SelectProduct(){this.Product.click();}
+    //Work
     public void SelectSize(){this.SelectSize.sendKeys(SIZE);}
     public void AddProduct(){this.AddToCarro.click();}
     public void BuyProduct(){this.Buy.click();}

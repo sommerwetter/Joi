@@ -7,12 +7,13 @@ import static pakete.UI.*;
 
 public class Bot {
 
-
     public static void main() {
 
-
         ChromeOptions options = new ChromeOptions();
-        //options.setExperimentalOption("debuggerAddress", "localhost:");
+
+        //Use this to use an already open window by taping it's localhost number            options.setExperimentalOption("debuggerAddress", "localhost:");
+
+        //Selenium Bypass
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
         options.setExperimentalOption("useAutomationExtension", new String[]{"False"});
         options.addArguments(
@@ -24,7 +25,6 @@ public class Bot {
                 "--profile-directory=Default",
                 "--disable-plugins-discovery",
                 "--disable-blink-features=AutomationControlled"
-
         );
 
         ChromeDriver driver = new ChromeDriver(options);
@@ -32,7 +32,6 @@ public class Bot {
 
         driver.get(Utils.SUP_URL);
         WebForm webForm = new WebForm(driver);
-        //webForm.SelectProduct(); //Manually select product
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         Delay.main(1500);
         webForm.SelectSize();
@@ -83,7 +82,10 @@ public class Bot {
         Delay.main(2000);
 
         webForm.ConfirmPurchase();
-    }
 
+        ;
+    
+
+    }
 
 }

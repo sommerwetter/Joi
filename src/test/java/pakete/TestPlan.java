@@ -9,6 +9,8 @@ public class TestPlan {
 
         UI.main();
 
+        //type this in terminal: taskkill /im chromedriver.exe /f      to be sure all chromedriver windows are closed
+        
     }
 
 }

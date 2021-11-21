@@ -6,7 +6,6 @@ import java.util.Objects;
 
 public class UI implements ActionListener{
 
-
     public static String nombre;
     public static JTextField name = new JTextField(20);
     public static String correo;
@@ -47,7 +46,12 @@ public class UI implements ActionListener{
 
     public static void main() {
 
+
+
         JFrame frame = new JFrame();
+
+
+        //LABELS
 
         JLabel NAME = new JLabel("Name:");
         NAME.setForeground(Color.white);
@@ -78,10 +82,15 @@ public class UI implements ActionListener{
         JLabel TWITTER = new JLabel("Twitter: @sirtiffany");
         TWITTER.setForeground(Color.gray);
 
+        //Buttons
         JButton boton = new JButton("Start");
         JButton close = new JButton("X");
+
+        //Panels
         JPanel panel = new JPanel();
         JPanel panel2 = new JPanel();
+
+        //To be able to move the window freely
         panel2.addMouseMotionListener(new MouseMotionAdapter() {
             @Override
             public void mouseDragged(MouseEvent e) {
@@ -96,10 +105,9 @@ public class UI implements ActionListener{
             }
         });
 
+        //JMenuBar menuBar = new JMenuBar();
 
-        JMenuBar menuBar = new JMenuBar();
-
-        JMenu settings = new JMenu("Settings");
+        //JMenu settings = new JMenu("Settings");
 
 
 
@@ -119,12 +127,9 @@ public class UI implements ActionListener{
 
 
 
+        //Button Settings
 
-
-
-
-        //Button
-
+        //Action for closing
         ActionListener cerrar = e -> System.exit(0);
 
         boton.addActionListener(new UI());
@@ -136,8 +141,11 @@ public class UI implements ActionListener{
 
         //Panel
 
+        //Moveable panel
         panel2.setBackground(new java.awt.Color(250,250,250,80));
         panel2.setBounds(3,3,350,30);
+
+        //Background
         panel.setLayout(null);
         panel.setBackground(new java.awt.Color(0,0,0,80));
 
@@ -171,8 +179,8 @@ public class UI implements ActionListener{
         panel.add(SIZE);
         panel.add(LINK);
         panel.add(TWITTER);
-
-        //TextField
+        
+        //TextField Settings
         name.setBounds(100, 40, 165, 25);
         email.setBounds(100,70,165,25);
         phone.setBounds(100,100,165,25);
@@ -188,7 +196,7 @@ public class UI implements ActionListener{
         linkBar.setBounds(100,400,165,25);
 
 
-        //Label
+        //Label Settings
         NAME.setBounds(10,40,80,25);
         EMAIL.setBounds(10,70,80,25);
         PHONE.setBounds(10,100,80,25);
@@ -203,10 +211,9 @@ public class UI implements ActionListener{
         SIZE.setBounds(10,370,40,25);
         LINK.setBounds(10,400,40,25);
         TWITTER.setBounds(5,500,120,30);
+        
 
         //Frame
-
-
         frame.setSize(350,600);
         frame.setResizable(false);
         frame.add(panel2);
@@ -218,11 +225,13 @@ public class UI implements ActionListener{
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
+    
     }
 
 
     @Override
 
+    //Action after pressing Start
     public void actionPerformed(ActionEvent e) {
 
         //credentials

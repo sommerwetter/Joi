@@ -5,6 +5,10 @@ Windows and MacOS
 
 Chrome Driver version 96
 
+-- UPDATES --
+
+- Update v.0.0.2: Added chrome auto log in support; for this you will need to enter your PC's Username (further explained by clicking the '?' button next to it). This is supposed to reduce bot detection.
+
 - Selenium bypass got patched. So you have to manually enter captcha and one only has one chance.
 
 - checkout speed reduced from 14.8s to 10s

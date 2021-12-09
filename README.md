@@ -23,6 +23,8 @@ Chromedriver modified to bypass Selenium detection.
 
 Donwload in the "Releases" section.
 
-Run/Doubleclick the "Joi" java file
+Close Google Chrome with Task Manager before running Joi.
+
+Run/Doubleclick the "Joi" jar file
 
 

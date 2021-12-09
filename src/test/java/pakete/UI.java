@@ -90,7 +90,7 @@ public class UI implements ActionListener{
 
         //Buttons
         JButton boton = new JButton("Start");
-        JButton close = new JButton("X");
+        JButton close = new JButton("Close");
         JButton info = new JButton("?");
 
         //Panels

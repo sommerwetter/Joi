@@ -28,14 +28,14 @@ public class Info {
         }
     });
 
-    JButton close = new JButton("X");
+    JButton close = new JButton("Close");
     
     ActionListener cerrar = e -> frame.dispose();
 
     close.addActionListener(cerrar);
     
         close.setBackground(new java.awt.Color(0,0,0,80));
-        close.setBounds(150,190,60,25);
+        close.setBounds(150,190,80,25);
 
         panel2.setBackground(new java.awt.Color(250,250,250,80));
         panel2.setBounds(0,0,350,30);

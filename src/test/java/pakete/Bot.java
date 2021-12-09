@@ -37,13 +37,13 @@ public class Bot {
         Delay.main(1500);
         driver.get(Utils.SUP_URL);
         WebForm webForm = new WebForm(driver);
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
         Delay.main(1200);
         webForm.SelectSize();
         Delay.main(1300);
         webForm.AddProduct();
         Delay.main(1000);
-        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
         webForm.BuyProduct();
 
         //wait for pay page to load

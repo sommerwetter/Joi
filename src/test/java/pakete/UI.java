@@ -33,11 +33,15 @@ public class UI implements ActionListener{
     public static String pagina;
     public static JTextField link = new JTextField(50);
     public static String section;
+    public static JTextField user = new JTextField(15);
+    public static String usuario;
 
     public static JComboBox tallaBar;
     public static JComboBox monthBar;
     public static JComboBox yearBar;
     public static JComboBox linkBar;
+
+    public static Info w2 = new Info();
 
 
 
@@ -81,10 +85,13 @@ public class UI implements ActionListener{
         LINK.setForeground(Color.white);
         JLabel TWITTER = new JLabel("Twitter: @sirtiffany");
         TWITTER.setForeground(Color.gray);
+        JLabel USER = new JLabel("PC Username");
+        USER.setForeground(Color.white);
 
         //Buttons
         JButton boton = new JButton("Start");
         JButton close = new JButton("X");
+        JButton info = new JButton("?");
 
         //Panels
         JPanel panel = new JPanel();
@@ -132,18 +139,28 @@ public class UI implements ActionListener{
         //Action for closing
         ActionListener cerrar = e -> System.exit(0);
 
+        
+        ActionListener pregunta = e -> w2.showWindow();
+
         boton.addActionListener(new UI());
-        boton.setBounds(150, 450, 70,25);
+        boton.setBounds(150, 470, 70,25);
         boton.setBackground(new java.awt.Color(0,0,0,80));
+
         close.addActionListener(cerrar);
         close.setBounds(126,560,120,30);
         close.setBackground(new java.awt.Color(0,0,0,80));
+
+        info.addActionListener(pregunta);
+        info.setBounds(230,430,60,25);
+        info.setBackground(new java.awt.Color(0,0,0,80));
+
+
 
         //Panel
 
         //Moveable panel
         panel2.setBackground(new java.awt.Color(250,250,250,80));
-        panel2.setBounds(3,3,350,30);
+        panel2.setBounds(0,0,350,30);
 
         //Background
         panel.setLayout(null);
@@ -162,6 +179,8 @@ public class UI implements ActionListener{
         panel.add(cardcode);
         panel.add(tallaBar);
         panel.add(linkBar);
+        panel.add(info);
+        panel.add(user);
 
         panel.add(boton);
         panel.add(close);
@@ -178,6 +197,7 @@ public class UI implements ActionListener{
         panel.add(CARDCODE);
         panel.add(SIZE);
         panel.add(LINK);
+        panel.add(USER);
         panel.add(TWITTER);
         
         //TextField Settings
@@ -194,6 +214,7 @@ public class UI implements ActionListener{
         cardcode.setBounds(100,340,165,25);
         tallaBar.setBounds(100,370,82,25);
         linkBar.setBounds(100,400,165,25);
+        user.setBounds(100,430,100,25);
 
 
         //Label Settings
@@ -211,6 +232,7 @@ public class UI implements ActionListener{
         SIZE.setBounds(10,370,40,25);
         LINK.setBounds(10,400,40,25);
         TWITTER.setBounds(5,500,120,30);
+        USER.setBounds(10,430,120,25);
         
 
         //Frame
@@ -248,7 +270,8 @@ public class UI implements ActionListener{
         tarjetayear = (String) yearBar.getSelectedItem();
         tarjetacodigo = cardcode.getText();
         talla = (String) tallaBar.getSelectedItem();
-        //section = (String) linkBar.getSelectedItem();
+        usuario = user.getText();
+        section = (String) linkBar.getSelectedItem();
         if (linkBar.getSelectedItem().equals("All")){
             pagina = "https://www.supremenewyork.com/shop/all";
         }

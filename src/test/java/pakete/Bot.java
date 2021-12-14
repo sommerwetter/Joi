@@ -18,13 +18,9 @@ public class Bot {
         //Selenium Bypass
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
         options.setExperimentalOption("useAutomationExtension", new String[]{"False"});
-        //options.setExperimentalOption("dom.webdriver.enabled", new String[]{"False"});
         options.addArguments(
                 "-disable-extensions",
-                //"-incognito",
-                //"--kiosk",
                 "--start-maximized",
-                //"--enable-javascript",
                 "disable-infobars",
                 "--disable-blink-features",
                 "--profile-directory=Default",

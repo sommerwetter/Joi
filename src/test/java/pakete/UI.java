@@ -85,6 +85,7 @@ public class UI implements ActionListener{
         JButton close = new JButton("Close");
         JButton info = new JButton("?");
         JButton load = new JButton("Load");
+        JButton save = new JButton("Save");
 
         //Panels
         JPanel panel = new JPanel();
@@ -146,6 +147,15 @@ public class UI implements ActionListener{
             }
         };
 
+        ActionListener SaveData = e -> {
+            try {
+                Savedata.main();
+            } catch (FileNotFoundException e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
+            }
+        };
+
         boton.addActionListener(new UI());
         boton.setBounds(150, 470, 70,25);
         boton.setBackground(new java.awt.Color(0,0,0,80));
@@ -174,6 +184,14 @@ public class UI implements ActionListener{
         load.setBorder(null);
         load.setFocusPainted(false);
 
+        save.addActionListener(SaveData);
+        save.setBounds(285,530,60,25);
+        save.setBackground(new java.awt.Color(0,0,0,80));
+        save.setForeground(Color.gray);
+        save.setBorder(null);
+        save.setFocusPainted(false);
+        
+
 
 
         //Panel
@@ -201,6 +219,7 @@ public class UI implements ActionListener{
         panel.add(linkBar);
         panel.add(info);
         panel.add(load);
+        panel.add(save);
         panel.add(user);
 
         panel.add(boton);

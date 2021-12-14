@@ -29,4 +29,4 @@ Close Google Chrome with Task Manager before running Joi.
 
 Run/Doubleclick the "Joi" jar file
 
-Edit the "SaveData.txt" file with your information in order(there is an example already written just edit it with your information) and do not change the file name, jsut save it. After that you can always click the "Load" button and your information will be loaded.
+Edit the "SaveData.txt" file with your information in order(there is an example already written just edit it with your information) and do not change the file name, just save it. After that you can always click the "Load" button and your information will be loaded.

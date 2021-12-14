@@ -1,8 +1,12 @@
 package pakete;
 import javax.swing.*;
+import org.apache.commons.codec.language.ColognePhonetic;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class UI implements ActionListener{
 
@@ -23,37 +27,25 @@ public class UI implements ActionListener{
     public static String tarjetanr;
     public static JTextField cardnr = new JTextField(20);
     public static String tarjetames;
-    public static JTextField cardmonth = new JTextField(2);
+    public static JComboBox monthBar;
     public static String tarjetayear;
-    public static JTextField cardyear = new JTextField(4);
+    public static JComboBox yearBar;
     public static String tarjetacodigo;
     public static JTextField cardcode = new JTextField(5);
     public static String talla;
-    public static JTextField size = new JTextField(1);
+    public static JComboBox tallaBar;
     public static String pagina;
-    public static JTextField link = new JTextField(50);
+    public static JComboBox linkBar;
     public static String section;
     public static JTextField user = new JTextField(15);
     public static String usuario;
 
-    public static JComboBox tallaBar;
-    public static JComboBox monthBar;
-    public static JComboBox yearBar;
-    public static JComboBox linkBar;
-
     public static Info w2 = new Info();
-
-
-
     private static int mouseX, mouseY;
-
 
     public static void main() {
 
-
-
         JFrame frame = new JFrame();
-
 
         //LABELS
 
@@ -92,6 +84,7 @@ public class UI implements ActionListener{
         JButton boton = new JButton("Start");
         JButton close = new JButton("Close");
         JButton info = new JButton("?");
+        JButton load = new JButton("Load");
 
         //Panels
         JPanel panel = new JPanel();
@@ -142,17 +135,44 @@ public class UI implements ActionListener{
         
         ActionListener pregunta = e -> w2.showWindow();
 
+        
+        
+        ActionListener LoadData = e -> {
+            try {
+                data.main();
+            } catch (FileNotFoundException e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
+            }
+        };
+
         boton.addActionListener(new UI());
         boton.setBounds(150, 470, 70,25);
         boton.setBackground(new java.awt.Color(0,0,0,80));
+        boton.setForeground(Color.gray);
+        boton.setBorder(null);
+        boton.setFocusPainted(false);
 
         close.addActionListener(cerrar);
-        close.setBounds(126,560,120,30);
+        close.setBounds(6,560,120,25);
         close.setBackground(new java.awt.Color(0,0,0,80));
+        close.setForeground(Color.gray);
+        close.setBorder(null);
+        close.setFocusPainted(false);
 
         info.addActionListener(pregunta);
         info.setBounds(230,430,60,25);
         info.setBackground(new java.awt.Color(0,0,0,80));
+        info.setForeground(Color.gray);
+        info.setBorder(null);
+        info.setFocusPainted(false);
+
+        load.addActionListener(LoadData);
+        load.setBounds(285,560,60,25);
+        load.setBackground(new java.awt.Color(0,0,0,80));
+        load.setForeground(Color.gray);
+        load.setBorder(null);
+        load.setFocusPainted(false);
 
 
 
@@ -180,6 +200,7 @@ public class UI implements ActionListener{
         panel.add(tallaBar);
         panel.add(linkBar);
         panel.add(info);
+        panel.add(load);
         panel.add(user);
 
         panel.add(boton);

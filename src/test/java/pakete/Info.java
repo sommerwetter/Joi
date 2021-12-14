@@ -35,7 +35,10 @@ public class Info {
     close.addActionListener(cerrar);
     
         close.setBackground(new java.awt.Color(0,0,0,80));
+        close.setForeground(Color.gray);
         close.setBounds(150,190,80,25);
+        close.setBorder(null);
+        close.setFocusPainted(false);
 
         panel2.setBackground(new java.awt.Color(250,250,250,80));
         panel2.setBounds(0,0,350,30);

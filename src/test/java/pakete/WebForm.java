@@ -9,7 +9,7 @@ public class WebForm extends PageObject {
     public WebForm(WebDriver driver) {
         super(driver);
     }
-
+    
     @FindBy(xpath = "//select[@id='size']")
     private WebElement SelectSize;
     @FindBy(xpath = "//fieldset[@id='add-remove-buttons']/input")

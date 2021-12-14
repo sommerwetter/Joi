@@ -1,8 +1,10 @@
 package pakete;
 
+import java.io.FileNotFoundException;
+
 public class TestPlan {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         // ChromeDriver location set up in com.Joi.hehe.Utils class
         System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);

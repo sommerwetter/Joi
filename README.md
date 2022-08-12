@@ -1,6 +1,8 @@
 # Joi
 Supreme Bot with an UI; based of my CopBot project
 
+**OUTDATED FOR THE MOMENT **
+
 Windows and MacOS
 
 Chrome Driver version 96
